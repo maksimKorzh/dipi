@@ -41,7 +41,7 @@ fetch() {
 
 install() {
   sudo mkdir -p /usr/local
-  PACS=$(ls $DOWNLOAD)
+  PACS=$(ls $DOWNLOAD 2> /dev/null)
   for PAC in $PACS; do
     sudo mount $DOWNLOAD/$PAC/$PAC.tcz $DOWNLOAD/$PAC
     sudo cp -r $DOWNLOAD/$PAC/usr/local/* /usr/local/
