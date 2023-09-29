@@ -17,5 +17,6 @@ There's no way to automatically remove packages installed with **dipi**,
 so keep that in mind.
 
 # YouTube tutorial
-[![IMAGE ALT TEXT HERE](https://raw.githubusercontent.com/maksimKorzh/msmd-linux/main/root/var/local/img/msmd-linux.png)](https://www.youtube.com/watch?v=EVTw4YqPdKA)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/V_vYksQExgo/0.jpg)](https://www.youtube.com/watch?v=V_vYksQExgo&list=PLLfIBXQeu3aZuc_0xTE2dY3juntHF5xJY&index=11)
+
 
