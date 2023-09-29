@@ -35,7 +35,7 @@ fetch() {
       done
     fi
   else
-    echo "Usage: ~$ pi nano"
+    echo "Usage: ~$ dipi nano"
   fi
 }
 
@@ -53,4 +53,3 @@ install() {
 rm -rf $DOWNLOAD
 fetch $1
 install
-rm -rf $DOWNLOAD
