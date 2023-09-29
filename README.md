@@ -8,7 +8,7 @@ installs package and dependencies to **/usr/local**
 
 # Usage
 Once you've downloaded **dipi** and copied it to **/usr/bin**<br>
-you can simply do: **~$ dipi nano** where 'nano' is a package name.
+you can simply do: **~$ dipi nano** where 'nano' is a package name.<br>
 You can use **wget -O- http://tinycorelinux.net/14.x/x86_64/tcz | grep your-package**<br>
 to search for a package.
 
