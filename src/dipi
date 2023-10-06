@@ -15,7 +15,7 @@ DOWNLOAD="/tmp/packages"
 # Current working directory
 PWD="$(pwd)"
 
-# Download single package
+# Download package
 fetch() {
   cd $PWD
   if [ ! -z $1 ]; then
@@ -31,7 +31,7 @@ fetch() {
       DEPS=$(cat $DOWNLOAD/$1/$1.dep 2> /dev/null)
       if [ $? -ne 0 ]; then return; fi
       for DEP in $DEPS; do
-        fetch $(echo $DEP | sed 's:\.tcz::')
+        fetch $(echo $DEP | sed 's/KERNEL/6.1.2-tinycore64/' | sed 's:\.tcz::')
       done
     fi
   else
@@ -39,6 +39,7 @@ fetch() {
   fi
 }
 
+# Install package
 install() {
   sudo mkdir -p /usr/local
   PACS=$(ls $DOWNLOAD 2> /dev/null)
@@ -50,6 +51,5 @@ install() {
 }
 
 # Main
-rm -rf $DOWNLOAD
 fetch $1
 install
