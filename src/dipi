@@ -12,6 +12,9 @@ REPO="http://tinycorelinux.net/14.x/x86_64/tcz"
 # Download folder
 DOWNLOAD="/tmp/packages"
 
+# Install folder
+INSTALL="/usr/local"
+
 # Current working directory
 PWD="$(pwd)"
 
@@ -45,7 +48,7 @@ install() {
   PACS=$(ls $DOWNLOAD 2> /dev/null)
   for PAC in $PACS; do
     sudo mount $DOWNLOAD/$PAC/$PAC.tcz $DOWNLOAD/$PAC
-    sudo cp -r $DOWNLOAD/$PAC/usr/local/* /usr/local/
+    sudo cp -r $DOWNLOAD/$PAC/usr/local/* $INSTALL
     sudo umount $DOWNLOAD/$PAC
   done
 }
