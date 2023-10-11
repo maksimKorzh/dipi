@@ -44,7 +44,7 @@ fetch() {
 
 # Install package
 install() {
-  sudo mkdir -p /usr/local
+  sudo mkdir -p $INSTALL
   PACS=$(ls $DOWNLOAD 2> /dev/null)
   for PAC in $PACS; do
     sudo mount $DOWNLOAD/$PAC/$PAC.tcz $DOWNLOAD/$PAC
